@@ -1,0 +1,31 @@
+<!--
+  Generated template for the NotificationsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--ÁREA DE NOTIFICAÇÕES-->
+<ion-list class="no-margin">
+    <ion-list-header class="no-margin">
+      <ion-icon name="notifications" color="primary"></ion-icon>
+      <span ion-text color="primary" class="bold">Notificações</span>
+    </ion-list-header>
+    <!--ÁREA DE NOTIFICAÇÕES NÃO LIDAS-->
+    <button ion-item color="danger" class="text-1x" tappable (click)="close()">
+      <ion-icon name="mail"></ion-icon>
+      Novo bolão na área!
+    </button>
+    <button ion-item color="danger" class="text-1x" tappable (click)="close()">
+      <ion-icon name="mail"></ion-icon>
+      Resultado de bolão
+    </button>
+    <!-- ÁREA DE NOTIFICAÇÕES LIDAS-->
+    <button ion-item class="text-1x" tappable (click)="close()">
+      <ion-icon name="mail-open" color="dark"></ion-icon>
+      <span ion-text color="dark">Convite para bolão</span>
+    </button>
+    <button ion-item class="text-1x" tappable (click)="close()">
+      <ion-icon name="mail-open" color="dark"></ion-icon>
+      <span ion-text color="dark">Convite para bolão</span>
+    </button>
+  </ion-list>

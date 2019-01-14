@@ -1,0 +1,64 @@
+
+<ion-content class="auth-page">
+    <div class="login-content">
+  
+      <!--ÁREA DE LOGO-->
+      <div padding text-center>
+        <div class="logo"></div>
+      </div>
+  
+      <!--FORMULÁRIO DE LOGIN-->
+      <form class="list-form">
+          <h4 ion-text class="text-white">
+            <P text-center>CADASTRE-SE</P>
+          </h4>
+        <ion-item>
+          <ion-label floating>
+            <ion-icon name="md-mail" item-start class="text-white"></ion-icon>
+              Email
+          </ion-label>
+          <ion-input [(ngModel)]="email"  name="Email" type="email"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label floating>
+            <ion-icon name="md-lock" item-start class="text-white"></ion-icon>
+              Senha
+          </ion-label>
+          <ion-input type="password" name="Senha" [(ngModel)]="senha"></ion-input>
+        </ion-item>
+      </form>
+  
+      <div margin-top>
+        <button ion-button icon-start block color="dark" tappable (click)="criarConta()">
+            <ion-icon name="log-in"></ion-icon>
+              ENTRAR
+        </button>
+  
+        <!--LOGIN COM REDES SOCIAIS (FACEBOOK E TWITTER)-->
+        <ion-grid>
+          <ion-row>
+            <ion-col col-4>
+              <button ion-button icon-only block class="btn-facebook">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col col-4>
+            </ion-col>
+            <ion-col col-4>
+                <button ion-button icon-only block class="btn-twitter">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </button>
+              </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+  
+      <!-- VOLTAR PARA PÁGINA -->
+      <div text-center margin-top>
+        <span ion-text color="white" tappable (click)="login()">Já possuo uma conta!</span>
+      </div>
+  
+    </div>
+  </ion-content>
+  

@@ -1,0 +1,74 @@
+<!--
+  Generated template for the SearchGamePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- # -->
+<ion-header color="primary">
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        <strong>FREE</strong>BET
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <!--ÁREA DE BUSCA DE BOLÕES-->
+  <ion-content>
+    <ion-card>
+        <p padding>BOLÕES DISPONÍVEIS</p>
+    </ion-card>
+
+    <ion-card *ngFor="let lista of listas">
+      <ion-card-content>
+        <ion-item text-uppercase class="start">  
+            <ion-label>{{lista.adversario1 }}</ion-label>
+            <ion-select [(ngModel)]="lista.a1gol">
+              <ion-option value="0">0</ion-option>
+              <ion-option value="1">1</ion-option>
+              <ion-option value="2">2</ion-option>          
+              <ion-option value="3">3</ion-option>
+              <ion-option value="4">4</ion-option>          
+              <ion-option value="5">5</ion-option>
+              <ion-option value="6">6</ion-option>
+              <ion-option value="7">7</ion-option>          
+              <ion-option value="8">8</ion-option>
+              <ion-option value="9">9</ion-option>
+            </ion-select>
+            <!-- POE O PAU AQUI  O XIZINHO PFV -->
+      </ion-item>    
+      <ion-item>
+           <ion-icon name="md-close"></ion-icon>
+        </ion-item>
+      <ion-item text-uppercase class="start">    
+          <ion-label>{{lista.adversario2 }}</ion-label>
+            <!-- POE O PAU AQUI  O ESPACAMENTO AQUI ENTRE OS SELETORES N SEI FAZER SE CONSEGUIR EH GOD  PFV -->
+            <ion-select [(ngModel)]="lista.a2gol">
+                <ion-option value="0">0</ion-option>
+                <ion-option value="1">1</ion-option>
+                <ion-option value="2">2</ion-option>          
+                <ion-option value="3">3</ion-option>
+                <ion-option value="4">4</ion-option>          
+                <ion-option value="5">5</ion-option>
+                <ion-option value="6">6</ion-option>
+                <ion-option value="7">7</ion-option>          
+                <ion-option value="8">8</ion-option>
+                <ion-option value="9">9</ion-option>
+              </ion-select>
+            </ion-item>
+        <button ion-button outline block item-end icon-start (click)="adiciona(lista)">
+          <ion-icon name="star"></ion-icon>
+          Participar
+        </button>
+        <ion-item>
+            <button ion-button full block color="white" (click)="socialS(tabela)">Compartilhar
+                <ion-icon padding name="ios-share-alt-outline"></ion-icon>
+              </button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+  </ion-content>

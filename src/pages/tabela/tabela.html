@@ -1,0 +1,44 @@
+<!--
+  Generated template for the TabelaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header color="primary">
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        <strong>FREE</strong>BET
+      </ion-title>
+      <ion-buttons end>
+  
+        <!--ÁREA DE NOTIFICAÇÕES E CONFIGURAÇÕES-->
+        <button ion-button tappable (click)="presentNotifications($event)">
+          <ion-icon name="notifications"></ion-icon>
+        </button>
+        <button ion-button tappable (click)="goToAccount()">
+          <ion-icon name="cog"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+
+  <ion-content class="card-background-page">
+
+      <ion-card>
+        <img src="assets/imgs/1.png"/>
+      </ion-card>
+    
+      <ion-card>
+          <img src="assets/imgs/2.png">
+      </ion-card>
+    
+      <ion-card>
+        <img src="assets/imgs/3.png"/>
+      </ion-card>
+    
+    </ion-content>

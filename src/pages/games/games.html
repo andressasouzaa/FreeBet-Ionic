@@ -1,0 +1,54 @@
+<!--
+  Generated template for the GamesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<!--TELA DESTINA A LISTAR OS BOLÕES ATIVOS-->
+<ion-header color="primary">
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        <strong>FREE</strong>BET
+      </ion-title>
+      <ion-buttons end>
+  
+        <!--ÁREA DE NOTIFICAÇÕES E CONFIGURAÇÕES-->
+        <button ion-button tappable (click)="presentNotifications($event)">
+          <ion-icon name="notifications"></ion-icon>
+        </button>
+        <button ion-button tappable (click)="goToAccount()">
+          <ion-icon name="cog"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+ <!--ÁREA DE BUSCA DE BOLÕES-->
+ <ion-content>
+    <!--SEARCHBAR PARA FILTRAR RESULTADOS-->
+      <ion-searchbar
+      [(ngModel)]="myInput" 
+      [showCancelButton]="shouldShowCancel"
+      (ionInput)="onInput($event)"
+      (ionCancel)="onCancel($event)">
+    </ion-searchbar>
+    <ion-card>
+        <p padding>BOLÕES INSCRITOS</p>
+    </ion-card>
+    <ion-card *ngFor="let lista of listas" >
+            <ion-item text-uppercase class="start">  
+                <ion-label>{{lista.time1 }}</ion-label>
+                <ion-label>{{lista.time2 }}</ion-label>
+          </ion-item>
+          <ion-item text-uppercase class="start">  
+              <ion-label>{{lista.a1gols }}</ion-label>
+              <ion-label>{{lista.a2gols }}</ion-label>
+        </ion-item>
+    </ion-card>
+
+
+</ion-content>

@@ -1,0 +1,143 @@
+
+<ion-header color="primary">
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <strong>FREE</strong>BET
+    </ion-title>
+    <ion-buttons end>
+
+      <!--ÁREA DE NOTIFICAÇÕES E CONFIGURAÇÕES-->
+      <button ion-button tappable (click)="presentNotifications($event)">
+        <ion-icon name="notifications"></ion-icon>
+      </button>
+      <button ion-button tappable (click)="goToAccount()">
+        <ion-icon name="cog"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<!--ÁREA PARA NOTÍCIAS SOBRE ESPORTES NO THE GUARDIAN-->
+<ion-content padding class="animated fadeIn common-bg" color="white">
+
+    <ion-card no-margin margin-bottom class="full-width">
+        <p padding>NOTÍCIAS</p>
+      <ion-slides>
+<!-- NOTÍCIAS DO THE GUARDIAN-->
+        <ion-slide color="white" *ngFor="let tabela of tabelas">
+          {{tabela.titulo}}
+          <ion-item>
+              <button ion-button full block color="white" (click)="abrirPagina(tabela)">Abrir Link
+                  <ion-icon padding name="md-paper"></ion-icon>
+                </button>
+          </ion-item>
+          <ion-item>
+              <button ion-button full block color="white" (click)="socialS(tabela)">Compartilhar
+                  <ion-icon padding name="ios-share-alt-outline"></ion-icon>
+                </button>
+          </ion-item>
+      </ion-slide>
+      </ion-slides>
+    </ion-card>
+
+
+<!--ÁREA DE CRIAÇÃO DE NOVAS APOSTAS-->
+      <ion-card no-margin margin-bottom class="full-width">
+        <p padding>CRIE SEU BOLÃO</p>
+        <ion-item>
+            <ion-label>Adversário 1</ion-label>
+            <ion-select [(ngModel)]="a1">
+              <ion-option value="alemanha">Alemanha</ion-option>
+              <ion-option value="arabia">Arábia Saudita</ion-option>
+              <ion-option value="argentina">Argentina</ion-option>
+              <ion-option value="australia">Austrália</ion-option>
+              <ion-option value="belgica">Bélgica</ion-option>
+              <ion-option value="brasil">Brasil</ion-option>
+              <ion-option value="colombia">Colombia</ion-option>
+              <ion-option value="coreiadosul">Coreia do Sul</ion-option>
+              <ion-option value="costarica">Costa Rica</ion-option>
+              <ion-option value="croacia">Croacia</ion-option>
+              <ion-option value="dinamarca">Dinamarca</ion-option>
+              <ion-option value="egito">Egito</ion-option>
+              <ion-option value="espanha">Espanha</ion-option>
+              <ion-option value="franca">França</ion-option>
+              <ion-option value="inglaterra">Inglaterra</ion-option>
+              <ion-option value="ira">Irã</ion-option>
+              <ion-option value="islandia">Islandia</ion-option>
+              <ion-option value="japao">Japao</ion-option>
+              <ion-option value="marrocos">Marrocos</ion-option>
+              <ion-option value="mexico">Mexico</ion-option>
+              <ion-option value="nigeria">Nigéria</ion-option>
+              <ion-option value="panama">Panamá</ion-option>
+              <ion-option value="peru">Peru</ion-option>
+              <ion-option value="polonia">Polônia</ion-option>
+              <ion-option value="portugal">Portugal</ion-option>
+              <ion-option value="russia">Rússia</ion-option>
+              <ion-option value="senegal">Senegal</ion-option>
+              <ion-option value="servia">Sérvia</ion-option>
+              <ion-option value="suecia">Suécia</ion-option>
+              <ion-option value="suica">Suiça</ion-option>
+              <ion-option value="tunisia">Tunísia</ion-option>
+              <ion-option value="uruguai">Uruguai</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+              <ion-label>Adversário 2</ion-label>
+              <ion-select [(ngModel)]="a2">
+                <ion-option value="alemanha">Alemanha</ion-option>
+                <ion-option value="arabia">Arábia Saudita</ion-option>
+                <ion-option value="argentina">Argentina</ion-option>
+                <ion-option value="australia">Austrália</ion-option>
+                <ion-option value="belgica">Bélgica</ion-option>
+                <ion-option value="brasil">Brasil</ion-option>
+                <ion-option value="colombia">Colombia</ion-option>
+                <ion-option value="coreiadosul">Coreia do Sul</ion-option>
+                <ion-option value="costarica">Costa Rica</ion-option>
+                <ion-option value="croacia">Croacia</ion-option>
+                <ion-option value="dinamarca">Dinamarca</ion-option>
+                <ion-option value="egito">Egito</ion-option>
+                <ion-option value="espanha">Espanha</ion-option>
+                <ion-option value="franca">França</ion-option>
+                <ion-option value="inglaterra">Inglaterra</ion-option>
+                <ion-option value="ira">Irã</ion-option>
+                <ion-option value="islandia">Islandia</ion-option>
+                <ion-option value="japao">Japao</ion-option>
+                <ion-option value="marrocos">Marrocos</ion-option>
+                <ion-option value="mexico">Mexico</ion-option>
+                <ion-option value="nigeria">Nigéria</ion-option>
+                <ion-option value="panama">Panamá</ion-option>
+                <ion-option value="peru">Peru</ion-option>
+                <ion-option value="polonia">Polônia</ion-option>
+                <ion-option value="portugal">Portugal</ion-option>
+                <ion-option value="russia">Rússia</ion-option>
+                <ion-option value="senegal">Senegal</ion-option>
+                <ion-option value="servia">Sérvia</ion-option>
+                <ion-option value="suecia">Suécia</ion-option>
+                <ion-option value="suica">Suiça</ion-option>
+                <ion-option value="tunisia">Tunísia</ion-option>
+                <ion-option value="uruguai">Uruguai</ion-option>
+              </ion-select>
+            </ion-item>
+    <p padding>Início:</p>
+    <ion-item>
+      <ion-icon name="md-calendar" color="primary" item-left></ion-icon>
+      <ion-datetime class="no-pl" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)]="dateini"></ion-datetime>
+    </ion-item>
+    <p padding>Fim:</p>
+    <ion-item>
+      <ion-icon name="md-calendar" color="primary" item-left></ion-icon>
+      <ion-datetime class="no-pl" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)]="datefim"></ion-datetime>
+    </ion-item>
+
+  </ion-card>
+
+  <button ion-button icon-start block no-margin color="primary" class="round" tappable (click)="doCreate()">
+    <ion-icon name="md-add-circle"></ion-icon> Criar Novo Bolão
+  </button>
+
+ <!-- <button ion-button (click)="salvarFoto()">SalvarFoto</button> -->
+
+</ion-content>
